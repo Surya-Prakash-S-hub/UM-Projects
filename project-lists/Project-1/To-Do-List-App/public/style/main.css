@@ -1,0 +1,213 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --nav-hgt: 80px;
+  --body-whole-hgt: 100vh;
+  --wrap-tank: cal(var(--body-whole-hgt) - var(--nav-hgt));
+  --list-wrap: 450px;
+  --inp-wd: calc(var(--list-wrap) - 40px);
+}
+body {
+  background-color: #a3a3a3;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-repeat: repeat;
+}
+header {
+  width: 100%;
+  height: var(--nav-hgt);
+  background-color: rgb(223, 190, 3);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+header h1 {
+  font-size: 2rem;
+  color: white;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background-color: #f1f1f1;
+}
+.box-container {
+  width: 100%;
+  height: var(--wrap-tank);
+  position: relative;
+}
+.wrap-container {
+  width: var(--list-wrap);
+  height: 570px;
+  border: 1px solid black;
+  margin: 30px auto 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+.inputField {
+  width: 100%;
+  height: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bd9802;
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  background-position: 50% 60%;
+  background-size: 40%;
+}
+.inputSection {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+form 
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0px 20px;
+}
+.inpText
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+input[type=text]
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+    font-size: 1.4rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+.line 
+{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;left: 0;
+    border-radius: 50px;
+    pointer-events: none;
+}
+.line::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+input[type=text]:focus ~ .line::before
+{
+    transform: scaleX(1);
+    transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+.labelLine
+{
+    position: absolute;
+    z-index: 5;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    transform: translate(10px,8px);
+    letter-spacing: 0.5px;
+    font-weight: 555;
+    transition: transform .7s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    padding-left: 4px;
+    background-color: transparent;
+    user-select: none;
+    pointer-events: none;
+}
+.labelLine::after
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    z-index: 6;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+    animation: fadeOut 1s linear infinite;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+input[type=text]:focus + .labelLine
+{
+    transform: translate(10px,-25px);
+}
+input[type=text]:focus + .labelLine::after 
+{
+    display: none;
+    transition-delay: .3s;
+}
+input[type=submit]
+{
+    position: absolute;
+    right: 8px;
+    margin-top: 14px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: #bab702;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(45,45,45,.5), 0px 0px 8px rgba(45,45,45,.4);
+    cursor: pointer;
+    transition: .1s ease;
+}
+input[type=submit]:hover
+{
+    box-shadow: 0px 0px 5px rgba(45,45,45,.7), 0px 0px 8px rgba(45,45,45,.6);
+}
+.outputField {
+  width: 100%;
+  height: auto;
+  flex: 4;
+  padding: 1.5rem;
+  background-color: white;
+  scrollbar-width: 3px;
+}
+.outputField p
+{
+    font-size: 1.2rem;
+    text-decoration: underline;
+    line-height: 35px;
+    padding-bottom: 20px;
+    padding-top: 7px;
+    border-bottom: 2px solid black;
+}

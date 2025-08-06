@@ -1,0 +1,25 @@
+# .gitignore
+
+# Backend
+node_modules/
+.env
+.env.local
+
+# Frontend (React)
+client/node_modules/
+client/build/
+
+# Logs & system files
+*.log
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE files
+.vscode/
+.idea/
+
+# Optional
+coverage/
+*.tmp
+*.bak
