@@ -28,27 +28,7 @@ Add, mark as complete, and delete tasks in a clean and simple UI.
 
 ## 📂 Project Structure
 
-📁 my-todo-app/
-├── public/
-│ ├── scripts/
-│ ├── style/
-│ │ ├── main.css
-├── src/
-│ ├── assets/ 
-│ ├── components/ # To-Do components
-│ │ ├── main/ 
-│ │ │ ├── CreateList.jsx
-│ │ │ ├── TodoList.jsx
-│ │ │ ├── ToDo.jsx
-│ │ ├── Footer.jsx
-│ │ ├── NavBar.jsx
-│ ├── App.jsx 
-│ ├── main.jsx # Main app component
-├── .gitignore
-├── .index.html
-├── package.json
-├── vite.config.js
-└── README.md
+<pre lang="markdown"> ``` 📁 my-todo-app/ ├── public/ │ ├── scripts/ │ ├── style/ │ │ ├── main.css ├── src/ │ ├── assets/ │ ├── components/ # To-Do components │ │ ├── main/ │ │ │ ├── CreateList.jsx │ │ │ ├── TodoList.jsx │ │ │ ├── ToDo.jsx │ │ ├── Footer.jsx │ │ ├── NavBar.jsx │ ├── App.jsx │ ├── main.jsx # Main app component ├── .gitignore ├── index.html ├── package.json ├── vite.config.js └── README.md ``` </pre>
 
 ---
 
