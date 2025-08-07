@@ -63,4 +63,6 @@ npm run preview
 
 📸 Screenshot
 
-![Preview](.\project-lists\ImageAssets\Project-1-images\OpenPage.png)
+![Preview](./src/assets/OpenPage.png)
+
+![App Screenshot](./src/assets/ResultPage.png)
