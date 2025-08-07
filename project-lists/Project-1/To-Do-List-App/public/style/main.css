@@ -1,3 +1,4 @@
+/* apply even style to all element in html using universal selector */
 *,
 *::after,
 *::before {
@@ -5,6 +6,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* adjusting some repeated style */
 :root {
   --nav-hgt: 80px;
   --body-whole-hgt: 100vh;
@@ -14,9 +16,11 @@
 }
 body {
   background-color: #a3a3a3;
+  /* this the source code for tranparenttextures with cube texture on background */
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   background-repeat: repeat;
 }
+/* header tag style */
 header {
   width: 100%;
   height: var(--nav-hgt);
@@ -28,20 +32,11 @@ header {
 header h1 {
   font-size: 2rem;
   color: white;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   text-transform: uppercase;
+  padding-left: 1.4rem;
 }
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  background-color: #f1f1f1;
-}
+/* from here main container styles */
 .box-container {
   width: 100%;
   height: var(--wrap-tank);
@@ -60,6 +55,7 @@ footer {
   align-items: start;
   justify-content: flex-start;
 }
+/* input style goes here */
 .inputField {
   width: 100%;
   height: auto;
@@ -68,6 +64,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: #bd9802;
+  /* this the source code for tranparenttextures with food texture on background */
   background-image: url("https://www.transparenttextures.com/patterns/food.png");
   background-position: 50% 60%;
   border-radius: 20px;
@@ -78,152 +75,140 @@ footer {
   height: 40px;
   position: relative;
 }
-form 
-{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 0px 20px;
+form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0px 20px;
 }
-.inpText
-{
-    width: 100%;
-    height: 100%;
-    position: relative;
+.inpText {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-input[type=text]
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 0px 15px;
-    font-size: 1.5rem;
-    font-weight: 550;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    font-family: 'Montserrat';
+input[type="text"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0px 15px;
+  font-size: 1.5rem;
+  font-weight: 550;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Montserrat";
 }
-.line 
-{
-    width: 100%;
-    height: .12rem;
-    background-color: white;
-    position: absolute;
-    bottom: 0;left: 0;
-    border-radius: 50px;
-    pointer-events: none;
-    overflow: hidden;
+/* simple line design */
+.line {
+  width: 100%;
+  height: 0.12rem;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
+  pointer-events: none;
+  overflow: hidden;
 }
-.line::before
-{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: .12rem;
-    background-color: #444;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+.line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.12rem;
+  background-color: #444;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
-input[type=text]:focus ~ .line::before
-{
-    transform: scaleX(1);
-    transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+input[type="text"]:focus ~ .line::before {
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
-.labelLine
-{
-    position: absolute;
-    z-index: 5;
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    transform: translate(10px,6px);
-    letter-spacing: 0.5px;
-    font-weight: 555;
-    transition: transform .7s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-    padding-left: 4px;
-    background-color: transparent;
-    user-select: none;
-    pointer-events: none;
-    font-family: 'Noto Sans';
+.labelLine {
+  position: absolute;
+  z-index: 5;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  transform: translate(10px, 6px);
+  letter-spacing: 0.5px;
+  font-weight: 555;
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  padding-left: 4px;
+  background-color: transparent;
+  user-select: none;
+  pointer-events: none;
+  font-family: "Noto Sans";
 }
-.labelLine::after
-{
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: black;
-    z-index: 6;
-    left: 0;
-    user-select: none;
-    pointer-events: none;
-    animation: fadeOut 1s linear infinite;
+.labelLine::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  z-index: 6;
+  left: 0;
+  user-select: none;
+  pointer-events: none;
+  animation: fadeOut 1s linear infinite;
 }
+/* style for animation (fadeOut) */
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-input[type=text]:focus + .labelLine
-{
-    transform: translate(10px,-25px);
+  from {
+    opacity: 1;
   }
-  input[type=text]:valid + .labelLine
-  {
-  transform: translate(10px,-25px);
+  to {
+    opacity: 0;
+  }
 }
-input[type=text]:valid + .labelLine::after
-{
+/* when input focus set .labeline style */
+input[type="text"]:focus + .labelLine {
+  transform: translate(10px, -25px);
+  font-size: 1.1rem;
+}
+input[type="text"]:valid + .labelLine {
+  transform: translate(10px, -25px);
+  font-size: 1.1rem;
+}
+/*when input valid set .lableline::after style */
+input[type="text"]:valid + .labelLine::after {
   display: none;
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
-input[type=text]:focus + .labelLine::after 
-{
-    display: none;
-    transition-delay: .3s;
+input[type="text"]:focus + .labelLine::after {
+  display: none;
+  transition-delay: 0.3s;
 }
-input[type=submit]
-{
-    position: absolute;
-    right: 8px;
-    margin-top: 14px;
-    width: 40px;
-    height: 40px;
-    display: block;
-    border-radius: 50%;
-    text-transform: uppercase;
-    outline: none;
-    border: none;
-    background-color: #bab702;
-    color: white;
-    box-shadow: 0px 0px 5px rgba(45,45,45,.5), 0px 0px 8px rgba(45,45,45,.4);
-    cursor: pointer;
-    transition: .1s ease;
+input[type="submit"] {
+  position: absolute;
+  right: 8px;
+  margin-top: 14px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  background-color: #bab702;
+  color: white;
+  box-shadow: 0px 0px 5px rgba(45, 45, 45, 0.5),
+    0px 0px 8px rgba(45, 45, 45, 0.4);
+  cursor: pointer;
+  transition: 0.1s ease;
 }
-input[type=submit]:hover
-{
-    box-shadow: 0px 0px 5px rgba(45,45,45,.7), 0px 0px 8px rgba(45,45,45,.6);
+input[type="submit"]:hover {
+  box-shadow: 0px 0px 5px rgba(45, 45, 45, 0.7),
+    0px 0px 8px rgba(45, 45, 45, 0.6);
 }
+/* User Output section style goes from here */
 .outputField {
   width: 100%;
   height: auto;
   flex: 4;
   padding: 1.5rem;
-  overflow:auto;
+  overflow: auto;
 }
-.outputField::-webkit-scrollbar{
-  width: 8px;
-}
-.outputField::-webkit-scrollbar-track
-{
-  color: #f1f1f1;
-}
-
 /* Scrollbar width */
 .outputField::-webkit-scrollbar {
   width: 4px;
@@ -245,26 +230,75 @@ input[type=submit]:hover
 .outputField::-webkit-scrollbar-thumb:hover {
   background-color: #bab702;
 }
-.outputField p
-{
-    font-size: 1.2rem;
-    line-height: 30px;
-    padding-bottom: 20px;
-    padding-top: 7px;
-    border-bottom: 2px solid black;
-    background-color: white;
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 10px;
-    font-family: 'Domine';
-    /* text-decoration: line-through; */
+/* give style to the list element p */
+.outputField p {
+  font-size: 1.2rem;
+  line-height: 30px;
+  padding-bottom: 20px;
+  padding-top: 7px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 10px;
+  font-family: "Domine";
 }
-.wrap-list
-{
+.wrap-list {
   position: relative;
   width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
-.makechanges
-{
-  background-color: blue;
+/* hide changes button */
+.makechanges {
+  background-color: rgba(255, 255, 0, 0.218);
+  backdrop-filter: blur(10px);
+  width: fit-content;
+  padding: 3px;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 10px;
+}
+/* show button while :hover */
+.wrap-list:hover .makechanges {
+  display: flex;
+}
+/* set style to three buttons */
+.makechanges .edit,
+.makechanges .delete,
+.makechanges .checked {
+  box-shadow: 0px 0px 4px rgba(45, 45, 45, 0.3);
+  display: block;
+  margin: 3px;
+  border-radius: 2px;
+}
+.makechanges button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* footer style goes here */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background-color: #f1f1f1;
+}
+footer .foot p {
+  color: #777;
 }

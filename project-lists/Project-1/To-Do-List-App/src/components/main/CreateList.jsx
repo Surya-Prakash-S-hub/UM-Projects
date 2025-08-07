@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function InputField(props) {
+  // set list items when user enter in the field
   const [list, setList] = useState({
     content: "",
   });
@@ -16,12 +17,13 @@ function InputField(props) {
       setViewBtn(false);
     }
   }
+  // when user submit the form
   function UploadData(e) {
     e.preventDefault();
     setList({ content: "" });
     setViewBtn(false)
     
-    props.onAdd(list)
+    props.onAdd(list) // return the list data to the Todo.jsx
   }
   return (
     <>
