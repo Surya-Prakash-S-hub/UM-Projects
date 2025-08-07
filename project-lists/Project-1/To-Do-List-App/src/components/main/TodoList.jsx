@@ -4,7 +4,13 @@ import React from "react";
 function List(props){
     return(
         <>
-            <p>{props.count + 1}. {props.content}</p>
+            <div className="wrap-list">
+                <p ><strong>{props.count + 1}</strong>. {props.content} </p>
+                <div className="makechanges">
+                    <div className="edit"></div>
+                    <div className="delete"></div>
+                </div>
+            </div>
         </>
     )
 }

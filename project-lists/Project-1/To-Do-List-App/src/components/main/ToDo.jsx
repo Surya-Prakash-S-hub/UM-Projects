@@ -1,27 +1,33 @@
-import React from "react";
+// import React, { useState } from "react";
 import InputField from "./CreateList";
 import List from "./TodoList";
 
 function ToDo(){
-    const ping = [
-        {
-            content:'lorem ipsum is the best of all time but we dont know how to use that so try me bitch'
-        },
-        {
-            content:'lorem ipsum is the best of all time but we dont know how to use that so try me bitch'
-        },
-        {
-            content:'lorem ipsum is the best of all time but we dont know how to use that so try me bitch'
-        },
-        {
-            content:'lorem ipsum is the best of all time but we dont know how to use that so try me bitch'
-        },
-        {
-            content:'lorem ipsum is the best of all time but we dont know how to use that so try me bitch'
-        },
-        {
-            content:'lorem ipsum is the best of all time but we dont know how to use that so try me bitch'
-        }
+    // const [datas, setDatas] = useState([]);
+
+    // function fetchData(data){
+    //     setDatas(preValue => {
+    //         return[...preValue,data];
+    //     })
+    // }
+    const datas = [
+        {content:'ssp ssp lorem this is not my victory this is our victory with the backend team, there is no db fetch you can see without visual team there is no calm web, with out the idea there is no structue and it will collapsed so we did a great job here.'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
+        {content:'ssp ssp'},
     ]
     return(
         <>
@@ -30,11 +36,11 @@ function ToDo(){
                     <div className="container">
                         <div className="inputField">
                             <div className="inputSection">
-                                <InputField />
+                                {/* <InputField onAdd={fetchData} /> */}
                             </div>
                         </div>
-                        <div style={{overflowY:'scroll'}} className="outputField">
-                            {ping.map((data,index) =>{
+                        <div className="outputField">
+                            {datas.map((data,index) =>{
                                 return <List key={index} count={index} content={data.content} />
                             })}
                         </div>
