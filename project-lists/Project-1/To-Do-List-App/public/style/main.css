@@ -246,7 +246,6 @@ input[type="submit"]:hover {
   width: 100%;
   display: block;
   margin-bottom: 10px;
-  overflow: hidden;
 }
 /* hide changes button */
 .makechanges {
@@ -256,7 +255,7 @@ input[type="submit"]:hover {
   padding: 3px;
   z-index: 99;
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 0%;
   display: none;
   align-items: center;
@@ -271,8 +270,9 @@ input[type="submit"]:hover {
 /* set style to three buttons */
 .makechanges .edit,
 .makechanges .delete,
-.makechanges .checked {
-  box-shadow: 0px 0px 4px rgba(45, 45, 45, 0.3);
+.makechanges .checked,
+.makechanges .priority {
+  /* box-shadow: 0px 0px 4px rgba(45, 45, 45, 0.3); */
   display: block;
   margin: 3px;
   border-radius: 2px;
@@ -284,6 +284,7 @@ input[type="submit"]:hover {
   font-size: 1rem;
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 /* footer style goes here */
@@ -301,4 +302,11 @@ footer {
 }
 footer .foot p {
   color: #777;
+}
+@media screen and (max-width: 460px) {
+  .wrap-container
+  {
+    width: 100%;
+    margin: 50px 0;
+  }
 }

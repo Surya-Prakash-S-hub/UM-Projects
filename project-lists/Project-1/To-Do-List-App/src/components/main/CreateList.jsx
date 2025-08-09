@@ -3,17 +3,17 @@ import React, { useState } from "react";
 function InputField(props) {
   // set list items when user enter in the field
   const [list, setList] = useState({
-    content: "",
+    content: ""
   });
   const [viewBtn, setViewBtn] = useState(false);
 
   function handleChanges(e) {
     const { value } = e.target;
     if (value.length > 0) {
-      setList({ content: value });
+      setList({ content: value});
       setViewBtn(true);
     } else {
-      setList({ content: value });
+      setList({ content: value});
       setViewBtn(false);
     }
   }
