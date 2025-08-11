@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import axios from "axios";
 
 const app = express();
 const port = 4000;
@@ -11,16 +12,23 @@ const longitude = 79.8139;
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
+let icon='';
 
-app.get('/', async(req, res) => {
+app.get('/weatherData/in', async(req, res) => {
     try{
-        const response = await fetch(`${BaseURL}?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
-        const result = response.rows;
-
-        console.log(result);    
+        const response = await axios.get(`${BaseURL}?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
+        const result = response.data;
+        res.json(result);
+        try{
+            console.log(result.weather[0].ico)
+        }
     }catch(err){
         console.log('error occured while fetch the data',err.message);
+        console.error('cannot fetch data')
     }
+})
+app.get('/weatherIcon/in', async(req, res) => {
+    console.log(icon);
 })
 
 app.listen(port,()=>{
