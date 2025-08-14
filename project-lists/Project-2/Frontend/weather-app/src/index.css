@@ -1,6 +1,257 @@
-*,*::before,*::after
+@import "tailwindcss";
+body {
+  background-color: rgb(3, 47, 47);
+}
+
+input[type="text"]:focus + .labelLine {
+  left: 90%;
+  color: #333;
+}
+input[type="text"]:valid + .labelLine {
+  left: 90%;
+}
+.outerContainer {
+  width: 100%;
+  height: 50vh;
+}
+.labelLine ion-icon
 {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  font-size: 1.7rem;
+}
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px auto 0;
+  gap: 10px;
+}
+.firstPhase {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+.firstPhase p {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  color: #fefefe;
+}
+.firstPhase img {
+  width: 100%;
+  height: auto;
+}
+.secondPhase .top h1 {
+  text-align: center;
+  font-size: 8rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+}
+.secondPhase .top h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+.secondPhase .bottom {
+  width: 100%;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  /* gap: 10px; */
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.759);
+  flex-wrap: wrap;
+}
+.secondPhase .bottom p {
+  position: relative;
+  width: fit-content;
+  padding: 10px 15px;
+}
+.secondPhase .bottom p:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 0.1rem !important;
+  height: 50%;
+  background-color: white;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* for error */
+#error {
+  width: fit-content;
+  margin: 200px auto 0;
+  text-align: center;
+}
+#error h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+h2 strong {
+  left: 0.5px;
+  text-decoration: underline;
+  font-family: monospace;
+}
+
+@media (max-width: 800px) {
+  .labelLine {
+    font-size: 1.2rem;
+  }
+  input[type="text"] {
+    width: 200px;
+    font-size: 1.2rem;
+  }
+  input[type="text"]:focus + .labelLine {
+    left: 80%;
+    color: #333;
+  }
+  input[type="text"]:valid + .labelLine {
+    left: 80%;
+  }
+  .outerContainer {
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+    margin: 50px auto 0;
+  }
+  .firstPhase p {
+    font-size: 2rem;
+  }
+  .firstPhase img {
+    width: fit-content;
+  }
+  .secondPhase .top h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+  .secondPhase .top h4 {
+    font-size: 1.4rem;
+  }
+  .secondPhase .bottom p:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    width: 0.1rem !important;
+    height: 50%;
+    background-color: white;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width:530px) {
+  nav 
+  {
+    padding: 0 1rem;
+  }
+  .sideLink 
+  {
+    gap: 10px;
+  }
+  input[type=text]{
+    width: 30px;
+    padding-right: 22px;
+    transition: width .6s linear;
+    cursor: pointer;
+  }
+  input[type=text]:focus{
+    width: 250px;
+    padding-right: 40px;
+  }
+  input[type=text]:valid{
+    width: 250px;
+    padding-right: 40px;
+  }
+  .labelLine {
+    left: 4px;
+  }
+    input[type="text"]:focus + .labelLine {
+    left: 85%;
+    color: #333;
+  }
+  input[type="text"]:valid + .labelLine {
+    left: 85%;
+  }
+  .find-location button
+  {
+    border-radius: 10px;
+  }
+  .outerContainer
+  {
+    margin-top: 30px;
+  }
+  .secondPhase .top h1 
+  {
+    font-size: 1.4rem;
+  }
+  .secondPhase .top h4
+  {
+    font-size: 1.2rem;
+  }
+  .secondPhase .bottom
+  {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-top: 30px;
+  }
+  .secondPhase .bottom p::after {
+    content: "";
+    position: absolute;
+    width: .3rem !important;
+    height: 50%;
+    background-color: white;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  } 
+  .textNear{
+    display: none;
+  }
+  .find-location button 
+  {
+    padding: 0 5px;
+  }
+  .logoNear ion-icon
+  {
+    font-size: 25px;
+  }
+  /* for error occurs */
+  #error h1 
+  {
+    font-size: 3.5rem;
+  }
+  #error h2 
+  {
+    font-size: 1.8rem;
+  }
+  #error h3 
+  {
+    font-size: 1.3rem;
+  }
 }

@@ -65,4 +65,4 @@ npm run preview
 
 ![Preview](./src/assets/OpenPage.png)
 
-![App Screenshot](./src/assets/ResultPage.png)
+![WithList](./src/assets/ResultPage.png)
