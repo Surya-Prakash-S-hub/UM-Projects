@@ -158,11 +158,22 @@ Services like Vercel, Netlify, or Render
 
 ### 📸 Screenshots
 
+Navigation Bar:
 ![NavigationBar](./imageAssets/navigation_bar.png)
+
+Main Content:
 ![MainContent](./imageAssets/content.png)
+
+Footer:
 ![Footer](./imageAssets/footer.png)
+
+Error: server side
 ![ServerError](./imageAssets/server_error.png)
+
+Error: City not found
 ![PlaceNotFound](./imageAssets/place_not_found.png)
+
+Overview:
 ![Result](./imageAssets/home_page.png)
 
 ### 📜 License
