@@ -135,8 +135,7 @@ Frontend runs at: http://localhost:5173
 ### 🚀 Deployment Guide
 
 1. Clone this repo
-git clone <your_repo_url>
-cd <project_folder>
+git clone <https://github.com/Surya-Prakash-S-hub/UM-Projects/tree/main/project-lists/Project-2>
 
 2. Install dependencies
 Follow the 📦 Install Dependencies section above.
